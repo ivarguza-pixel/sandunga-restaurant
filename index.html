@@ -48,23 +48,58 @@
 </header>
 
   <main>
-    <div id="bienvenida">
-      <h2>Bienvenidos a Sandunga</h2>
-      <p>Comida mestiza y cultura mazatleca en el corazón de Mazatlán.</p>
+
+    <!-- Jumbotron -->
+    <div class="container-fluid p-0">
+      <div class="p-5 text-white text-center" 
+           style="background-color: #8B0000;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 3em;">
+          Bienvenidos a Sandunga
+        </h2>
+        <p class="lead">Comida mestiza y cultura mazatleca en el corazón de Mazatlán.</p>
+        <a href="menu.html" class="btn btn-warning btn-lg mt-3">Ver Menú</a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg mt-3 ms-2">Contáctanos</a>
+      </div>
     </div>
 
-    <div class="seccion">
-      <h3>¿Dónde estamos?</h3>
-      <p>Visítanos en la <span class="resaltado">Plazuela Machado</span>, 
-      el lugar más bonito de Mazatlán.</p>
+    <!-- Mosaicos -->
+    <div class="container my-5">
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow">
+            <div class="card-body">
+              <h3 class="card-title" style="color: #8B0000;">🍽️ Nuestro Menú</h3>
+              <p class="card-text">Platillos frescos del mar de Mazatlán con recetas tradicionales sinaloenses.</p>
+              <a href="menu.html" class="btn btn-danger">Ver Menú</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow">
+            <div class="card-body">
+              <h3 class="card-title" style="color: #8B0000;">📍 Ubicación</h3>
+              <p class="card-text">Sixto Osuna 34, Plazuela Machado, Centro, Mazatlán, Sinaloa.</p>
+              <a href="contact.html" class="btn btn-danger">Cómo llegar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow">
+            <div class="card-body">
+              <h3 class="card-title" style="color: #8B0000;">📞 Reservaciones</h3>
+              <p class="card-text">Reserva tu mesa y disfruta de la mejor experiencia gastronómica.</p>
+              <a href="tel:6699816354" class="btn btn-danger">669-981-6354</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="seccion">
-      <h3>Llámanos</h3>
-      <p><a href="tel:6699816354" class="enlace-telefono">669-981-6354</a></p>
-    </div>
   </main>
-
   <footer>
     <p>&copy; 2026 Restaurant Sandunga. Mazatlán, Sinaloa.</p>
   </footer>
