@@ -81,3 +81,47 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
+
+/* Clases para secciones */
+.seccion {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-left: 4px solid #8B0000;
+}
+
+.seccion h3 {
+  color: #8B0000;
+  margin-bottom: 10px;
+}
+
+/* Clase para enlaces especiales */
+.enlace-telefono {
+  color: #8B0000;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.enlace-telefono:hover {
+  color: #FFD700;
+}
+
+/* Clase para resaltar texto */
+.resaltado {
+  background-color: #FFF8DC;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* ID para contenido principal de inicio */
+#bienvenida {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #FFF8DC;
+  margin-bottom: 20px;
+}
+
+#bienvenida h2 {
+  font-size: 2em;
+  color: #8B0000;
+}
