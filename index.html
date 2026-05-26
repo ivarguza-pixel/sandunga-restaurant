@@ -13,16 +13,39 @@
 <body>
 
   <header>
-    <h1>Restaurant Sandunga</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html">Menú</a></li>
-        <li><a href="about.html">Nosotros</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbar navbar-expand-lg" style="background-color: #8B0000;">
+    <div class="container">
+      <a class="navbar-brand text-white" href="index.html"
+         style="font-family: 'Playfair Display', serif; font-size: 1.5em;">
+        Restaurant Sandunga
+      </a>
+      <button class="navbar-toggler" type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="menu.html">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
   <main>
     <div id="bienvenida">
