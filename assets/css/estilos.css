@@ -84,17 +84,7 @@ footer {
   margin-top: 30px;
 }
 
-/* Clases para secciones */
-.seccion {
-  margin-bottom: 30px;
-  padding: 15px;
-  border-left: 4px solid #8B0000;
-}
 
-.seccion h3 {
-  color: #8B0000;
-  margin-bottom: 10px;
-}
 
 /* Clase para enlaces especiales */
 .enlace-telefono {
