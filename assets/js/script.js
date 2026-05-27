@@ -1,48 +1,61 @@
 // ==========================================
-// LAB JS-6 JavaScript aplicado al sitio
+// LAB JS-AV4 IIFEs y Espacios de Nombres
 // ==========================================
 
-document.addEventListener("DOMContentLoaded", function() {
+// IIFE básico - se ejecuta inmediatamente
+(function() {
+  console.log("IIFE ejecutado inmediatamente");
+  let mensaje = "Este mensaje es privado";
+  console.log(mensaje);
+})();
 
-  // 1. Mostrar hora actual en el footer
-  let footer = document.querySelector("footer p");
-  let ahora = new Date();
-  let hora = ahora.getHours();
-  let minutos = ahora.getMinutes();
-  let horaTexto = `${hora}:${minutos < 10 ? "0" + minutos : minutos}`;
-  footer.textContent += ` | Hora actual: ${horaTexto}`;
+// La variable mensaje no existe fuera del IIFE
+// console.log(mensaje); // esto daría error
 
-  // 2. Verificar si el restaurant está abierto
-  let estaAbierto = (hora >= 13 && hora <= 22);
+// IIFE con parámetro
+(function(nombre) {
+  console.log("Bienvenido al sistema:", nombre);
+})("Restaurant Sandunga");
+
+// Espacio de nombres - evita conflictos entre scripts
+let Sandunga = {};
+
+Sandunga.menu = (function() {
+  let platillos = ["Ceviche", "Aguachile", "Camarones"];
   
-  let aviso = document.createElement("div");
-  aviso.style.textAlign = "center";
-  aviso.style.padding = "10px";
-  aviso.style.fontWeight = "bold";
-  
-  if (estaAbierto) {
-    aviso.textContent = "✅ Estamos abiertos ahora";
-    aviso.style.backgroundColor = "#28a745";
-    aviso.style.color = "white";
-  } else {
-    aviso.textContent = "❌ Estamos cerrados. Horario: 1pm - 10pm";
-    aviso.style.backgroundColor = "#dc3545";
-    aviso.style.color = "white";
-  }
-  
-  document.querySelector("header").after(aviso);
+  return {
+    listar: function() {
+      return platillos;
+    },
+    agregar: function(platillo) {
+      platillos.push(platillo);
+      console.log("Agregado:", platillo);
+    },
+    total: function() {
+      return platillos.length;
+    }
+  };
+})();
 
-  // 3. Efecto hover en tarjetas
-  let tarjetas = document.querySelectorAll(".card");
-  tarjetas.forEach(function(tarjeta) {
-    tarjeta.addEventListener("mouseenter", function() {
-      this.style.transform = "scale(1.03)";
-      this.style.transition = "transform 0.3s ease";
-    });
-    tarjeta.addEventListener("mouseleave", function() {
-      this.style.transform = "scale(1)";
-    });
-  });
+Sandunga.reservaciones = (function() {
+  let reservas = [];
+  
+  return {
+    hacer: function(nombre, personas) {
+      reservas.push({ nombre, personas });
+      console.log(`Reserva para ${nombre} - ${personas} personas`);
+    },
+    listar: function() {
+      return reservas;
+    }
+  };
+})();
 
-  console.log("Script cargado. Hora:", horaTexto, "| Abierto:", estaAbierto);
-});
+// Usar los espacios de nombres
+console.log("Menú:", Sandunga.menu.listar());
+Sandunga.menu.agregar("Chilorio");
+console.log("Total platillos:", Sandunga.menu.total());
+
+Sandunga.reservaciones.hacer("Juan García", 4);
+Sandunga.reservaciones.hacer("María López", 2);
+console.log("Reservas:", Sandunga.reservaciones.listar());
