@@ -5,174 +5,92 @@
   <meta name="description" content="Menú - Restaurant Sandunga">
   <title>Menú | Restaurant Sandunga</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="manifest" href="/sandunga-restaurant/manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
 
   <header>
-  <nav class="navbar navbar-expand-lg" style="background-color: #8B0000;">
-    <div class="container">
-      <a class="navbar-brand text-white" href="index.html"
-         style="font-family: 'Playfair Display', serif; font-size: 1.5em;">
-        Restaurant Sandunga
-      </a>
-      <button class="navbar-toggler" type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#menuPrincipal"
-              aria-controls="menuPrincipal" 
-              aria-expanded="false" 
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white active" href="menu.html">Menú</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="about.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="contact.html">Contacto</a>
-          </li>
+    <div class="container navbar">
+      <a class="navbar-brand" href="index.html">Restaurant Sandunga</a>
+      <button class="navbar-toggler" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <nav class="navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav">
+          <li><a class="nav-link" href="index.html">Inicio</a></li>
+          <li><a class="nav-link active" href="menu.html">Menú</a></li>
+          <li><a class="nav-link" href="about.html">Nosotros</a></li>
+          <li><a class="nav-link" href="contact.html">Contacto</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
-  </nav>
-</header>
+  </header>
 
-  <main>
+  <main class="container">
+    <h2 class="section-title">Nuestro Menú</h2>
 
-    <div class="container my-5">
-      <h2 class="text-center mb-4" 
-          style="font-family: 'Playfair Display', serif; color: #8B0000;">
-        Nuestro Menú
-      </h2>
-
-      <!-- Entradas -->
-      <h3 class="mb-3" style="color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 8px;">
-        🥗 Entradas
-      </h3>
-      <div class="row g-4 mb-5">
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Ceviche Mazatleco</h5>
-              <p class="card-text">Camarón fresco marinado en limón con jitomate, cebolla y cilantro.</p>
-              <span class="badge bg-danger">$120</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Aguachile de Camarón</h5>
-              <p class="card-text">Camarón en salsa de chile verde con pepino y cebolla morada.</p>
-              <span class="badge bg-danger">$150</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Tostadas de Marlín</h5>
-              <p class="card-text">Marlín ahumado sobre tostada crujiente con aguacate y mayonesa.</p>
-              <span class="badge bg-danger">$90</span>
-            </div>
-          </div>
-        </div>
-
+    <h3 class="menu-category">🥗 Entradas</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h5 class="card-title">Ceviche Mazatleco</h5>
+        <p class="card-text">Camarón fresco marinado en limón con jitomate, cebolla y cilantro.</p>
+        <span class="badge">$120</span>
       </div>
-
-      <!-- Platos Fuertes -->
-      <h3 class="mb-3" style="color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 8px;">
-        🍤 Platos Fuertes
-      </h3>
-      <div class="row g-4 mb-5">
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Camarones a la Diabla</h5>
-              <p class="card-text">Camarones en salsa roja picante servidos con arroz y frijoles.</p>
-              <span class="badge bg-danger">$220</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Filete Empapelado</h5>
-              <p class="card-text">Filete de pescado fresco con verduras al vapor en papel aluminio.</p>
-              <span class="badge bg-danger">$200</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Chilorio Sinaloense</h5>
-              <p class="card-text">Cerdo deshebrado en chile colorado, receta tradicional sinaloense.</p>
-              <span class="badge bg-danger">$180</span>
-            </div>
-          </div>
-        </div>
-
+      <div class="card">
+        <h5 class="card-title">Aguachile de Camarón</h5>
+        <p class="card-text">Camarón en salsa de chile verde con pepino y cebolla morada.</p>
+        <span class="badge">$150</span>
       </div>
-
-      <!-- Bebidas -->
-      <h3 class="mb-3" style="color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 8px;">
-        🥤 Bebidas
-      </h3>
-      <div class="row g-4">
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Agua de Jamaica</h5>
-              <p class="card-text">Refrescante agua fresca de flor de jamaica natural.</p>
-              <span class="badge bg-danger">$40</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Tejuino Mazatleco</h5>
-              <p class="card-text">Bebida tradicional de maíz fermentado con limón y sal.</p>
-              <span class="badge bg-danger">$50</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title" style="color: #8B0000;">Cerveza Artesanal</h5>
-              <p class="card-text">Cerveza artesanal local elaborada con ingredientes de Sinaloa.</p>
-              <span class="badge bg-danger">$80</span>
-            </div>
-          </div>
-        </div>
-
+      <div class="card">
+        <h5 class="card-title">Tostadas de Marlín</h5>
+        <p class="card-text">Marlín ahumado sobre tostada crujiente con aguacate y mayonesa.</p>
+        <span class="badge">$90</span>
       </div>
     </div>
 
+    <h3 class="menu-category">🍤 Platos Fuertes</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h5 class="card-title">Camarones a la Diabla</h5>
+        <p class="card-text">Camarones en salsa roja picante servidos con arroz y frijoles.</p>
+        <span class="badge">$220</span>
+      </div>
+      <div class="card">
+        <h5 class="card-title">Filete Empapelado</h5>
+        <p class="card-text">Filete de pescado fresco con verduras al vapor en papel aluminio.</p>
+        <span class="badge">$200</span>
+      </div>
+      <div class="card">
+        <h5 class="card-title">Chilorio Sinaloense</h5>
+        <p class="card-text">Cerdo deshebrado en chile colorado, receta tradicional sinaloense.</p>
+        <span class="badge">$180</span>
+      </div>
+    </div>
+
+    <h3 class="menu-category">🥤 Bebidas</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h5 class="card-title">Agua de Jamaica</h5>
+        <p class="card-text">Refrescante agua fresca de flor de jamaica natural.</p>
+        <span class="badge">$40</span>
+      </div>
+      <div class="card">
+        <h5 class="card-title">Tejuino Mazatleco</h5>
+        <p class="card-text">Bebida tradicional de maíz fermentado con limón y sal.</p>
+        <span class="badge">$50</span>
+      </div>
+      <div class="card">
+        <h5 class="card-title">Cerveza Artesanal</h5>
+        <p class="card-text">Cerveza artesanal local elaborada con ingredientes de Sinaloa.</p>
+        <span class="badge">$80</span>
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2026 Restaurant Sandunga. Mazatlán, Sinaloa.</p>
   </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

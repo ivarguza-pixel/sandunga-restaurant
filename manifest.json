@@ -1,0 +1,22 @@
+{
+  "name": "Restaurant Sandunga",
+  "short_name": "Sandunga",
+  "description": "Comida mestiza y cultura mazatleca en el corazón de Mazatlán.",
+  "start_url": "/sandunga-restaurant/index.html",
+  "display": "standalone",
+  "background_color": "#8B0000",
+  "theme_color": "#8B0000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/sandunga-restaurant/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sandunga-restaurant/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

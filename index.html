@@ -6,103 +6,63 @@
   <meta name="author" content="ivarguza-pixel">
   <title>Restaurant Sandunga</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="manifest" href="/sandunga-restaurant/manifest.json">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
+  <meta name="theme-color" content="#8B0000">
 </head>
 <body>
 
   <header>
-  <nav class="navbar navbar-expand-lg" style="background-color: #8B0000;">
-    <div class="container">
-      <a class="navbar-brand text-white" href="index.html"
-         style="font-family: 'Playfair Display', serif; font-size: 1.5em;">
-        Restaurant Sandunga
-      </a>
-      <button class="navbar-toggler" type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#menuPrincipal"
-              aria-controls="menuPrincipal" 
-              aria-expanded="false" 
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="menu.html">Menú</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="about.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="contact.html">Contacto</a>
-          </li>
+    <div class="container navbar">
+      <a class="navbar-brand" href="index.html">Restaurant Sandunga</a>
+      <button class="navbar-toggler" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <nav class="navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav">
+          <li><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li><a class="nav-link" href="menu.html">Menú</a></li>
+          <li><a class="nav-link" href="about.html">Nosotros</a></li>
+          <li><a class="nav-link" href="contact.html">Contacto</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
-  </nav>
-</header>
+  </header>
 
   <main>
-
-    <!-- Jumbotron -->
-    <div class="container-fluid p-0">
-      <div class="p-5 text-white text-center" 
-           style="background-color: #8B0000; min-height: 300px;">
-         <h2 style="font-family: 'Playfair Display', serif; font-size: 3em; color: #FFD700;">          Bienvenidos a Sandunga
-        </h2>
+    <section class="hero">
+      <div class="container">
+        <h2>Bienvenidos a Sandunga</h2>
         <p class="lead">Comida mestiza y cultura mazatleca en el corazón de Mazatlán.</p>
-        <a href="menu.html" class="btn btn-warning btn-lg mt-3">Ver Menú</a>
-        <a href="contact.html" class="btn btn-outline-light btn-lg mt-3 ms-2">Contáctanos</a>
+        <a href="menu.html" class="btn btn-warning btn-lg">Ver Menú</a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg">Contáctanos</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Mosaicos -->
-    <div class="container my-5">
-      <div class="row g-4">
-
-        <div class="col-md-4">
-          <div class="card h-100 text-center shadow">
-            <div class="card-body">
-              <h3 class="card-title" style="color: #8B0000;">🍽️ Nuestro Menú</h3>
-              <p class="card-text">Platillos frescos del mar de Mazatlán con recetas tradicionales sinaloenses.</p>
-              <a href="menu.html" class="btn btn-danger">Ver Menú</a>
-            </div>
-          </div>
+    <section class="container">
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">🍽️ Nuestro Menú</h3>
+          <p class="card-text">Platillos frescos del mar de Mazatlán con recetas tradicionales sinaloenses.</p>
+          <a href="menu.html" class="btn btn-danger">Ver Menú</a>
         </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 text-center shadow">
-            <div class="card-body">
-              <h3 class="card-title" style="color: #8B0000;">📍 Ubicación</h3>
-              <p class="card-text">Sixto Osuna 34, Plazuela Machado, Centro, Mazatlán, Sinaloa.</p>
-              <a href="contact.html" class="btn btn-danger">Cómo llegar</a>
-            </div>
-          </div>
+        <div class="card">
+          <h3 class="card-title">📍 Ubicación</h3>
+          <p class="card-text">Sixto Osuna 34, Plazuela Machado, Centro, Mazatlán, Sinaloa.</p>
+          <a href="contact.html" class="btn btn-danger">Cómo llegar</a>
         </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 text-center shadow">
-            <div class="card-body">
-              <h3 class="card-title" style="color: #8B0000;">📞 Reservaciones</h3>
-              <p class="card-text">Reserva tu mesa y disfruta de la mejor experiencia gastronómica.</p>
-              <a href="tel:6699816354" class="btn btn-danger">669-981-6354</a>
-            </div>
-          </div>
+        <div class="card">
+          <h3 class="card-title">📞 Reservaciones</h3>
+          <p class="card-text">Reserva tu mesa y disfruta de la mejor experiencia gastronómica.</p>
+          <a href="tel:6699816354" class="btn btn-danger">669-981-6354</a>
         </div>
-
       </div>
-    </div>
-
+    </section>
   </main>
+
   <footer>
     <p>&copy; 2026 Restaurant Sandunga. Mazatlán, Sinaloa.</p>
   </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/script.js"></script>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
